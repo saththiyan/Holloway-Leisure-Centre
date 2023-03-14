@@ -10,6 +10,7 @@ public class  Membership {
     private String email;
     private String doj;
 
+    //Constructor
     public Membership(String number, String name, boolean isTeamOrganizer, String teamName, String dob, String address, String homeTel, String workTel, String email, String doj) {
         this.number = number;
         this.name = name;
@@ -23,6 +24,7 @@ public class  Membership {
         this.doj = doj;
     }
 
+    // getter methods
     public String getNumber() {
         return number;
     }
