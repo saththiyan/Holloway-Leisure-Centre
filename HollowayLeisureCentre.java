@@ -148,4 +148,41 @@ public class HollowayLeisureCentre {
             System.out.println("Membership not found!");
         }
     }
+
+
+    //Manage Subscription
+      public static void manageSubscription(Scanner sc) {
+        boolean isRunning = true;
+        while (isRunning) {
+            System.out.println("Manage Subscription:");
+            System.out.println("Please select an Subscription option:");
+            System.out.println("1. Renew Subscription");
+            System.out.println("2. Cancel Subscription");
+            System.out.println("3. View All Subscription");
+            System.out.println("4. Exit");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    addMembership(sc);
+                    break;
+                case 2:
+                    removeMembership(sc);
+                    break;
+                case 3:
+                    viewMemberships();
+                    break;
+                case 4:
+                    isRunning = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice!");
+                    break;
+            }
+        }
+    }
+
+
+
+
+
 }
