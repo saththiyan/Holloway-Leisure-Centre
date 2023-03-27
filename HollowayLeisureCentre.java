@@ -163,13 +163,13 @@ public class HollowayLeisureCentre {
             int choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    addMembership(sc);
+                    addSubscription(sc);
                     break;
                 case 2:
-                    removeMembership(sc);
+                    //removeSubscription(sc);
                     break;
                 case 3:
-                    viewMemberships();
+                    viewSubscription();
                     break;
                 case 4:
                     isRunning = false;
@@ -181,8 +181,27 @@ public class HollowayLeisureCentre {
         }
     }
 
+    public static void addSubscription(Scanner sc) {
+        System.out.println("Add Membership:");
+        System.out.println("Enter Membership Number:");
+        String subscri_ID = sc.next();
+        System.out.println("Enter Membership Name:");
+        String price = sc.next();
+        System.out.println("Enter Membership Name:");
+        String description = sc.next();
+        Subscription subscriptions = new Subscription( subscri_ID, price, description);
+        subscriptions.add(subscriptions);
+        System.out.println("Membership added successfully!");
+    }
 
-
-
-
+    public static void viewSubscription() {
+        System.out.println("All Subscription Level:");
+        for (Subscription subscription : subscriptions) {
+            System.out.println("Membership Number: " + subscription.getSubscri_ID());
+            System.out.println("Name: " + subscription.getPrice());
+            System.out.println("Team Organizer: " + subscription.getDescription());
+        
+            System.out.println();
+        }
+    }
 }
